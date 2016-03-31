@@ -1,42 +1,51 @@
-var globalCaps = false;
-var globalShift = false;
+var capsLock = false;
+var shift = false;
 
 $(".right-shift").click(function () {
-    if (globalShift == false) {
-        globalShift = true;
+    if (shift == false) {
+        shift = true;
         $(this).css("color", "#3ADF00");
         $(".off").css("display", "none");
         $(".on").css("display", "block");
+        $(".letter").css("text-transform", "uppercase");
+
     } else {
-        globalShift = false;
+       shift = false;
         $(this).css("color", "white");
         $(".off").css("display", "block");
         $(".on").css("display", "none");
+        $(".letter").css("text-transform", "lowercase");
 
     }
 });
 
 $(".left-shift").click(function () {
-    if (globalShift == false) {
-        globalShift = true;
+    if (shift == false) {
+        shift = true;
         $(this).css("color", "#3ADF00");
         $(".off").css("display", "none");
         $(".on").css("display", "block");
+        $(".letter").css("text-transform", "uppercase");
+
     } else {
-        globalShift = false;
+       shift = false;
         $(this).css("color", "white");
         $(".off").css("display", "block");
         $(".on").css("display", "none");
+        $(".letter").css("text-transform", "lowercase");
 
     }
 });
 
 $(".capslock").click(function () {
-    if (globalCaps == false) {
-        globalCaps = true;
+    if (capsLock == false) {
+        capsLock = true;
         $(this).css("color", "#3ADF00");
+        $(".letter").css("text-transform", "uppercase");
     } else {
-        globalCaps = false;
+        capsLock = false;
         $(this).css("color", "white");
+        $(".letter").css("text-transform", "lowercase");
+
     }
 });
