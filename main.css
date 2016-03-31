@@ -27,12 +27,16 @@ body {
     transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
 }
 
-.clicked {
-    -moz-transform: translate(-1px, 1px);
-    -webkit-transform: translate(-1px, 1px);
-    -o-transform: translate(-1px, 1px);
-    -ms-transform: translate(-1px, 1px);
-    transform: translate(-1px, 1px);
+.keydown {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .on {
@@ -51,4 +55,13 @@ body {
         padding: 10px 15px;
         border: 1px solid white;
     }
+}
+
+#target {
+    width: 100%;
+    height: 100px;
+}
+
+.text-container {
+    margin: 10px;
 }
