@@ -9,15 +9,13 @@ $("td").mouseleave(function () {
     $(this).removeClass("hover");
 });
 
-
 $("td").mousedown(function () {
-    $(this).addClass("clicked");
+    $(this).addClass("keydown");
 });
 
 $("td").mouseup(function () {
-    $(this).removeClass("clicked");
+    $(this).removeClass("keydown");
 });
-
 
 $(".right-shift").click(function () {
     if (shift == false) {
