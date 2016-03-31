@@ -1,21 +1,21 @@
 var capsLock = false;
 var shift = false;
 
-$( "td" ).mouseenter(function() {
-  $(this).addClass("hover");
+$("td").mouseenter(function () {
+    $(this).addClass("hover");
 });
 
-$( "td" ).mouseleave(function() {
-  $(this).removeClass("hover");
+$("td").mouseleave(function () {
+    $(this).removeClass("hover");
 });
 
 
-$( "td" ).mousedown(function() {
-  $(this).addClass("clicked");
+$("td").mousedown(function () {
+    $(this).addClass("clicked");
 });
 
-$( "td" ).mouseup(function() {
-  $(this).removeClass("clicked");
+$("td").mouseup(function () {
+    $(this).removeClass("clicked");
 });
 
 
@@ -28,7 +28,7 @@ $(".right-shift").click(function () {
         $(".letter").css("text-transform", "uppercase");
 
     } else {
-       shift = false;
+        shift = false;
         $(this).css("color", "white");
         $(".off").css("display", "block");
         $(".on").css("display", "none");
@@ -46,7 +46,7 @@ $(".left-shift").click(function () {
         $(".letter").css("text-transform", "uppercase");
 
     } else {
-       shift = false;
+        shift = false;
         $(this).css("color", "white");
         $(".off").css("display", "block");
         $(".on").css("display", "none");

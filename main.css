@@ -1,9 +1,10 @@
 body {
     margin: 0;
 }
+
 .keyboard table {
     width: 100%;
-    font-family: verdana, sans-serif;
+    font-family: monospace, sans-serif;
     font-size: 3vw;
     color: white;
 }
@@ -28,12 +29,10 @@ body {
 
 .clicked {
     -moz-transform: translate(-1px, 1px);
--webkit-transform: translate(-1px, 1px);
--o-transform: translate(-1px, 1px);
--ms-transform: translate(-1px, 1px);
-transform: translate(-1px, 1px);
-
-
+    -webkit-transform: translate(-1px, 1px);
+    -o-transform: translate(-1px, 1px);
+    -ms-transform: translate(-1px, 1px);
+    transform: translate(-1px, 1px);
 }
 
 .on {
@@ -53,4 +52,3 @@ transform: translate(-1px, 1px);
         border: 1px solid white;
     }
 }
-
