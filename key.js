@@ -1,6 +1,24 @@
 var capsLock = false;
 var shift = false;
 
+$( "td" ).mouseenter(function() {
+  $(this).addClass("hover");
+});
+
+$( "td" ).mouseleave(function() {
+  $(this).removeClass("hover");
+});
+
+
+$( "td" ).mousedown(function() {
+  $(this).addClass("clicked");
+});
+
+$( "td" ).mouseup(function() {
+  $(this).removeClass("clicked");
+});
+
+
 $(".right-shift").click(function () {
     if (shift == false) {
         shift = true;
