@@ -1,13 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Duru+Sans);
 body {
     margin: 0;
 }
+
 .keyboard table {
     width: 100%;
-    font-family: 'Duru Sans', sans-serif;
-    font-size: .50em;
+    font-family: monospace, sans-serif;
+    font-size: 3vw;
     color: white;
-    max-width: 960px;
 }
 
 .keyboard table td {
@@ -20,12 +19,20 @@ body {
     border-radius: 5px;
 }
 
-.keyboard table td:hover {
+.hover {
     -moz-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
     -webkit-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
     -o-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
     -ms-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
     transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+}
+
+.clicked {
+    -moz-transform: translate(-1px, 1px);
+    -webkit-transform: translate(-1px, 1px);
+    -o-transform: translate(-1px, 1px);
+    -ms-transform: translate(-1px, 1px);
+    transform: translate(-1px, 1px);
 }
 
 .on {
@@ -36,23 +43,12 @@ body {
     display: block;
 }
 
-@media screen and (min-device-width: 420px) {
-    .keyboard table {
-        font-size: .55em;
-    }
-    .keyboard table td {
-        padding: 5px;
-        border: none;
-    }
-}
-
 @media screen and (min-width: 640px) {
     .keyboard table {
-        font-size: 1em;
+        font-size: 2vw;
     }
     .keyboard table td {
         padding: 10px 15px;
         border: 1px solid white;
     }
 }
-
