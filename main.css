@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Duru+Sans);
+.keyboard table {
+    width: 100%;
+    font-family: 'Duru Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    max-width: 960px;
+}
+
+.keyboard table td {
+    text-align: center;
+    padding: 15px 10px;
+    background: #2E2E2E;
+    border: 1px solid white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.keyboard table td:hover {
+    -moz-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -webkit-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -o-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    -ms-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+    transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
+}
+
+.on {
+    display: none;
+}
+
+.off {
+    display: block;
+}
+
+
+/* #### Mobile Phones Portrait or Landscape #### */
+
+@media screen and (max-device-width: 640px) {
+    /* some CSS here */
+    .keyboard table {
+        font-size: .70em;
+    }
+    .keyboard table td {
+        padding: 5px;
+    }
+}
