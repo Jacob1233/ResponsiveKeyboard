@@ -2,13 +2,15 @@ body {
     margin: 0;
 }
 
+/*.keyboard is the container for the tables*/
 .keyboard table {
     width: 100%;
-    font-family: monospace, sans-serif;
+    font-family: monospace, sans-serif;    /*For now, a monospace font is required*/
     font-size: 3vw;
     color: white;
 }
 
+/*Each <td> is a key*/
 .keyboard table td {
     text-align: center;
     padding: 5px;
@@ -16,6 +18,7 @@ body {
     border: none;
 }
 
+/*Only used if on a desktop where user is clicking the keys*/
 .hover {
     -moz-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
     -webkit-transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
@@ -24,6 +27,7 @@ body {
     transform: scale(1) rotate(0deg) translate(1px, -1px) skew(0deg, 0deg);
 }
 
+/*When a key is pressed add this class to the <td>*/
 .keydown {
     -moz-transform: translate(-1px, 1px);
     -webkit-transform: translate(-1px, 1px);
@@ -32,14 +36,26 @@ body {
     transform: translate(-1px, 1px);
 }
 
+.letters {
+    
+}
+
+/*Added to the .letters class for uppercase letters*/
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*By default, shift keys are off*/
 .on {
     display: none;
 }
 
+/*By default, regular keys are displayed*/
 .off {
     display: block;
 }
 
+/*Non phone screens*/
 @media screen and (min-width: 640px) {
     .keyboard table {
         font-size: 2vw;
