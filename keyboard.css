@@ -14,6 +14,9 @@ body {
     padding: 5px;
     background: #2E2E2E;
     border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
 .hover {
@@ -25,11 +28,19 @@ body {
 }
 
 .keydown {
-    -moz-transform: translate(-1px, 1px);
-    -webkit-transform: translate(-1px, 1px);
-    -o-transform: translate(-1px, 1px);
-    -ms-transform: translate(-1px, 1px);
-    transform: translate(-1px, 1px);
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.capsLockOn {
+    color: lawngreen;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 .on {
@@ -42,13 +53,19 @@ body {
 
 @media screen and (min-width: 640px) {
     .keyboard table {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     .keyboard table td {
         padding: 10px 15px;
         border: 1px solid white;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
     }
+}
+
+#keyboardtarget {
+    width: 100%;
+    height: 100px;
+}
+
+.text-container {
+    margin: 10px;
 }

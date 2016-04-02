@@ -6,94 +6,105 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Responsive Keyboard</title>
-    <link rel="stylesheet" href="key.css" />
+    <link rel="stylesheet" href="keyboard.css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
+    <div class="text-container">
+        <textarea id="keyboardtarget" autofocus disabled></textarea>
+    </div>
 
     <div class="keyboard">
         <table class="table">
             <tr>
-                <td data-keycode="192" class="symbol"><span class="off">`</span><span class="on">~</span></td>
-                <td data-keycode="49" class="symbol"><span class="off">1</span><span class="on">!</span></td>
-                <td data-keycode="50" class="symbol"><span class="off">2</span><span class="on">@</span></td>
-                <td data-keycode="51" class="symbol"><span class="off">3</span><span class="on">#</span></td>
-                <td data-keycode="52" class="symbol"><span class="off">4</span><span class="on">$</span></td>
-                <td data-keycode="53" class="symbol"><span class="off">5</span><span class="on">%</span></td>
-                <td data-keycode="54" class="symbol"><span class="off">6</span><span class="on">^</span></td>
-                <td data-keycode="55" class="symbol"><span class="off">7</span><span class="on">&amp;</span></td>
-                <td data-keycode="56" class="symbol"><span class="off">8</span><span class="on">*</span></td>
-                <td data-keycode="57" class="symbol"><span class="off">9</span><span class="on">(</span></td>
-                <td data-keycode="48" class="symbol"><span class="off">0</span><span class="on">)</span></td>
-                <td data-keycode="189" class="symbol"><span class="off">-</span><span class="on">_</span></td>
-                <td data-keycode="187" class="symbol"><span class="off">=</span><span class="on">+</span></td>
-                <td data-keycode="8" class="delete lastitem">delete</td>
+                <td id="192" class="symbol"><span class="off">`</span><span class="on">~</span></td>
+                <td id="49" class="symbol"><span class="off">1</span><span class="on">!</span></td>
+                <td id="50" class="symbol"><span class="off">2</span><span class="on">@</span></td>
+                <td id="51" class="symbol"><span class="off">3</span><span class="on">#</span></td>
+                <td id="52" class="symbol"><span class="off">4</span><span class="on">$</span></td>
+                <td id="53" class="symbol"><span class="off">5</span><span class="on">%</span></td>
+                <td id="54" class="symbol"><span class="off">6</span><span class="on">^</span></td>
+                <td id="55" class="symbol"><span class="off">7</span><span class="on">&amp;</span></td>
+                <td id="56" class="symbol"><span class="off">8</span><span class="on">*</span></td>
+                <td id="57" class="symbol"><span class="off">9</span><span class="on">(</span></td>
+                <td id="48" class="symbol"><span class="off">0</span><span class="on">)</span></td>
+                <td id="189" class="symbol"><span class="off">-</span><span class="on">_</span></td>
+                <td id="187" class="symbol"><span class="off">=</span><span class="on">+</span></td>
+                <td id="8" class="delete lastitem">delete</td>
             </tr>
         </table>
         <table class="table">
             <tr>
-                <td data-keycode="9" class="tab">tab</td>
-                <td data-keycode="81" class="letter">q</td>
-                <td data-keycode="87" class="letter">w</td>
-                <td data-keycode="69" class="letter">e</td>
-                <td data-keycode="82" class="letter">r</td>
-                <td data-keycode="84" class="letter">t</td>
-                <td data-keycode="89" class="letter">y</td>
-                <td data-keycode="85" class="letter">u</td>
-                <td data-keycode="73" class="letter">i</td>
-                <td data-keycode="79" class="letter">o</td>
-                <td data-keycode="80" class="letter">p</td>
-                <td data-keycode="219" class="symbol"><span class="off">[</span><span class="on">{</span></td>
-                <td data-keycode="221" class="symbol"><span class="off">]</span><span class="on">}</span></td>
-                <td data-keycode="220" class="symbol lastitem"><span class="off">\</span><span class="on">|</span></td>
+                <td id="9" class="tab">tab</td>
+                <td id="81" class="letter">q</td>
+                <td id="87" class="letter">w</td>
+                <td id="69" class="letter">e</td>
+                <td id="82" class="letter">r</td>
+                <td id="84" class="letter">t</td>
+                <td id="89" class="letter">y</td>
+                <td id="85" class="letter">u</td>
+                <td id="73" class="letter">i</td>
+                <td id="79" class="letter">o</td>
+                <td id="80" class="letter">p</td>
+                <td id="219" class="symbol"><span class="off">[</span><span class="on">{</span></td>
+                <td id="221" class="symbol"><span class="off">]</span><span class="on">}</span></td>
+                <td id="220" class="symbol lastitem"><span class="off">\</span><span class="on">|</span></td>
             </tr>
         </table>
         <table class="table">
             <tr>
-                <td data-keycode="20" class="capslock">caps</td>
-                <td data-keycode="65" class="letter">a</td>
-                <td data-keycode="83" class="letter">s</td>
-                <td data-keycode="68" class="letter">d</td>
-                <td data-keycode="70" class="letter">f</td>
-                <td data-keycode="71" class="letter">g</td>
-                <td data-keycode="72" class="letter">h</td>
-                <td data-keycode="74" class="letter">j</td>
-                <td data-keycode="75" class="letter">k</td>
-                <td data-keycode="76" class="letter">l</td>
-                <td data-keycode="186" class="symbol"><span class="off">;</span><span class="on">:</span></td>
-                <td data-keycode="222" class="symbol"><span class="off">'</span><span class="on">&quot;</span></td>
-                <td data-keycode="13" class="return lastitem">return</td>
+                <td id="20" class="capslock">caps</td>
+                <td id="65" class="letter">a</td>
+                <td id="83" class="letter">s</td>
+                <td id="68" class="letter">d</td>
+                <td id="70" class="letter">f</td>
+                <td id="71" class="letter">g</td>
+                <td id="72" class="letter">h</td>
+                <td id="74" class="letter">j</td>
+                <td id="75" class="letter">k</td>
+                <td id="76" class="letter">l</td>
+                <td id="186" class="symbol"><span class="off">;</span><span class="on">:</span></td>
+                <td id="222" class="symbol"><span class="off">'</span><span class="on">&quot;</span></td>
+                <td id="13" class="return lastitem">return</td>
             </tr>
         </table>
         <table class="table">
             <tr>
-                <td data-keycode="16" class="left-shift">shift</td>
-                <td data-keycode="90" class="letter">z</td>
-                <td data-keycode="88" class="letter">x</td>
-                <td data-keycode="67" class="letter">c</td>
-                <td data-keycode="86" class="letter">v</td>
-                <td data-keycode="66" class="letter">b</td>
-                <td data-keycode="78" class="letter">n</td>
-                <td data-keycode="77" class="letter">m</td>
-                <td data-keycode="188" class="symbol"><span class="off">,</span><span class="on">&lt;</span></td>
-                <td data-keycode="190" class="symbol"><span class="off">.</span><span class="on">&gt;</span></td>
-                <td data-keycode="191" class="symbol"><span class="off">/</span><span class="on">?</span></td>
-                <td data-keycode="16" class="right-shift lastitem">shift</td>
+                <td id="16" class="left-shift">shift</td>
+                <td id="90" class="letter">z</td>
+                <td id="88" class="letter">x</td>
+                <td id="67" class="letter">c</td>
+                <td id="86" class="letter">v</td>
+                <td id="66" class="letter">b</td>
+                <td id="78" class="letter">n</td>
+                <td id="77" class="letter">m</td>
+                <td id="188" class="symbol"><span class="off">,</span><span class="on">&lt;</span></td>
+                <td id="190" class="symbol"><span class="off">.</span><span class="on">&gt;</span></td>
+                <td id="191" class="symbol"><span class="off">/</span><span class="on">?</span></td>
+                <td id="16a" class="right-shift lastitem">shift</td>
             </tr>
         </table>
         <table class="table">
             <tr>
-                <td data-keycode="32" class="space lastitem">&nbsp;</td>
+                <td id="17" class="">ctrl</td>
+                <td id="18" class="">opt</td>
+                <td id="91" class="">com</td>
+                <td id="32" class="space lastitem">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td id="93" class="">com</td>
+                <td id="18" class="">opt</td>
             </tr>
         </table>
-
     </div>
 
-
-
-
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-    <script src="key.js"></script>
+    <script src="keyboard.js"></script>
 </body>
 
 </html>
