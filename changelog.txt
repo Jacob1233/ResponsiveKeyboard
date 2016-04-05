@@ -1,7 +1,10 @@
-04/01/2016 @ 3:42am
+04/05/2016 @ 3:10pm (UTC)
+1. Added numpad support
+2. Recognized that windows select key and osx right command share keycode
+04/01/2016 @ 3:42am (UTC)
 1. Change 'com' to 'cmd'
 2. Fixed grave accent
-04/01/2016 @ 3:24am
+04/01/2016 @ 3:24am (UTC)
 1. All new JS
 2. Touchscreen and physical keyboard support
 3. Some changes to css
