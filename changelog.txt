@@ -1,4 +1,7 @@
-2016-04-01T03:24:06+00:00
+04/01/2016 @ 3:42am
+1. Change 'com' to 'cmd'
+2. Fixed grave accent
+04/01/2016 @ 3:24am
 1. All new JS
 2. Touchscreen and physical keyboard support
-2. Some changes to css
+3. Some changes to css

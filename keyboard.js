@@ -110,7 +110,8 @@ var KEYCODES = {
     CLOSEBRAKET: 221,
     SINGLEQUOTE: 222,
     LEFTCOMMAND: 91,
-    RIGHTCOMMAND: 92
+    RIGHTCOMMAND: 92,
+    TILDA: 192
 };
 
 function type(param) {
@@ -136,6 +137,7 @@ $(document).keyup(function (event) {
 function checkKeyPress(keycode) {
     //Prevent repetitive keys
     if (down[keycode] == null) {
+        
         if (keycode == KEYCODES.SHIFT) {
             $("#16a").addClass('keydown');
         }
@@ -284,6 +286,14 @@ function checkKeyPress(keycode) {
 
         if (keycode == KEYCODES.Z) {
             type("z");
+        }
+        
+        if (keycode == KEYCODES.GRAVEACCENT) {
+            if (shift == true) {
+                type('~');
+            } else {
+                type("`");
+            }
         }
 
         if (keycode == KEYCODES.ZERO) {
