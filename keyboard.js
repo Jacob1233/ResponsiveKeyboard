@@ -1,7 +1,6 @@
 //Jacob Wilson
 //http://stackoverflow.com/questions/9098901/how-to-disable-repetitive-keydown-in-jquery
 //http://www.cambiaresearch.com/articles/15/javascript-key-codes
-//http://keycode.info
 
 var shift = false;
 var capsLock = false;
@@ -13,7 +12,6 @@ var letter = $('.letter');
 var KEYCODES = {
     BACKSPACE: 8,
     TAB: 9,
-    CLEAR: 12, //OSX Clear
     ENTER: 13,
     SHIFT: 16,
     CTRL: 17,
@@ -70,7 +68,7 @@ var KEYCODES = {
     Z: 90,
     LEFTWINDOW: 91,
     RIGHTWINDOW: 92,
-    SELECTKEY: 93, //Right command
+    SELECTKEY: 93,
     NUMPAD0: 96,
     NUMPAD1: 97,
     NUMPAD2: 98,
@@ -139,11 +137,11 @@ $(document).keyup(function (event) {
 function checkKeyPress(keycode) {
     //Prevent repetitive keys
     if (down[keycode] == null) {
-
+        
         if (keycode == KEYCODES.SHIFT) {
             $("#16a").addClass('keydown');
         }
-
+        
         $("#" + keycode).addClass('keydown');
         down[keycode] = true;
 
@@ -289,7 +287,7 @@ function checkKeyPress(keycode) {
         if (keycode == KEYCODES.Z) {
             type("z");
         }
-
+        
         if (keycode == KEYCODES.GRAVEACCENT) {
             if (shift == true) {
                 type('~');
@@ -457,138 +455,23 @@ function checkKeyPress(keycode) {
                 type("=");
             }
         }
-
-        if (keycode == KEYCODES.NUMPAD0) {
-            type("0");
-        }
-
-        if (keycode == KEYCODES.NUMPAD1) {
-            type("1");
-        }
-
-        if (keycode == KEYCODES.NUMPAD2) {
-            type("2");
-        }
-
-        if (keycode == KEYCODES.NUMPAD3) {
-            type("3");
-        }
-
-        if (keycode == KEYCODES.NUMPAD4) {
-            type("4");
-        }
-
-        if (keycode == KEYCODES.NUMPAD5) {
-            type("5");
-        }
-
-        if (keycode == KEYCODES.NUMPAD6) {
-            type("6");
-        }
-
-        if (keycode == KEYCODES.NUMPAD7) {
-            type("7");
-        }
-
-        if (keycode == KEYCODES.NUMPAD8) {
-            type("8");
-        }
-
-        if (keycode == KEYCODES.NUMPAD9) {
-            type("9");
-        }
-
-        if (keycode == KEYCODES.DECIMALPOINT) {
-            type(".");
-        }
-
-        if (keycode == KEYCODES.MULTIPLY) {
-            type("*");
-        }
-
-        if (keycode == KEYCODES.SUBTRACT) {
-            type("-");
-        }
-
-        if (keycode == KEYCODES.DIVIDE) {
-            type("/");
-        }
-
-        if (keycode == KEYCODES.ADD) {
-            type("+");
-        }
-
-        if (keycode == KEYCODES.NUMPAD0) {
-            type("0");
-        }
-
-        if (keycode == KEYCODES.NUMPAD1) {
-            type("1");
-        }
-
-        if (keycode == KEYCODES.NUMPAD2) {
-            type("2");
-        }
-
-        if (keycode == KEYCODES.NUMPAD3) {
-            type("3");
-        }
-
-        if (keycode == KEYCODES.NUMPAD4) {
-            type("4");
-        }
-
-        if (keycode == KEYCODES.NUMPAD5) {
-            type("5");
-        }
-
-        if (keycode == KEYCODES.NUMPAD6) {
-            type("6");
-        }
-
-        if (keycode == KEYCODES.NUMPAD7) {
-            type("7");
-        }
-
-        if (keycode == KEYCODES.NUMPAD8) {
-            type("8");
-        }
-
-        if (keycode == KEYCODES.NUMPAD9) {
-            type("9");
-        }
-
-        if (keycode == KEYCODES.DECIMALPOINT) {
-            type(".");
-        }
-
-        if (keycode == KEYCODES.MULTIPLY) {
-            type("*");
-        }
-
-        if (keycode == KEYCODES.SUBTRACT) {
-            type("-");
-        }
-
-        if (keycode == KEYCODES.DIVIDE) {
-            type("/");
-        }
-
-        if (keycode == KEYCODES.ADD) {
-            type("+");
-        }
-
+        
     }
 }
 
 function checkKeyUp(keycode) {
     down[keycode] = null;
     if (keycode == KEYCODES.SHIFT) {
-        $("#16a").removeClass('keydown');
-    }
+            $("#16a").removeClass('keydown');
+        }
 
     $("#" + keycode).removeClass('keydown');
-
+    if (keycode == KEYCODES.SHIFT) {
+        shift = false;
+        $(".off").css("display", "block");
+        $(".on").css("display", "none");
+        $(".letter").css("text-transform", "lowercase");
+    }
 }
 
 $('td').mousedown(function () {
